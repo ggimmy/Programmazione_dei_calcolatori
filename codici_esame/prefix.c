@@ -7,7 +7,7 @@ char *prefix(char *, int );
 
 int main(){
 
-    char* a = "porcoddio";
+    char* a = "programmazione";
     int n = 3;
     char* result = prefix(a,n);
     printf("%s\n",result);

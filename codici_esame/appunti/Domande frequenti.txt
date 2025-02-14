@@ -1,0 +1,49 @@
+FAQ Esame di Programmazione
+Domande Frequenti
+
+1. Qual è la differenza tra un linguaggio di programmazione interpretato e uno compilato?
+
+Un linguaggio interpretato esegue il codice riga per riga, traducendo e eseguendo ogni istruzione al volo. Un linguaggio compilato traduce l'intero codice sorgente in linguaggio macchina prima dell'esecuzione, creando un file eseguibile. Python è un esempio di linguaggio interpretato, mentre C è un linguaggio compilato.
+
+2. Come si calcola la complessità temporale di un algoritmo?
+
+La complessità temporale si misura in base al numero di operazioni elementari eseguite dall'algoritmo in funzione della dimensione dell'input. Si esprime solitamente utilizzando la notazione O-grande, che indica l'ordine di grandezza della funzione costo.
+
+3. Qual è la differenza tra la notazione O-grande e Theta-grande?
+
+La notazione O-grande fornisce un limite superiore alla complessità temporale, mentre la notazione Theta-grande fornisce un limite sia superiore che inferiore.
+
+4. Quali sono le principali strutture dati in Python e C?
+
+In Python:
+
+    Liste: sequenze mutabili di elementi.
+    Tuple: sequenze immutabili di elementi.
+    Dizionari: collezioni di coppie chiave-valore.
+
+In C:
+
+    Array: sequenze di elementi dello stesso tipo.
+    Struct: aggregazioni di dati di diverso tipo.
+    Liste concatenate: sequenze di elementi collegati tramite puntatori.
+
+5. Cosa sono i puntatori in C e come si utilizzano?
+
+I puntatori sono variabili che contengono indirizzi di memoria. Si utilizzano per accedere e modificare direttamente le aree di memoria, consentendo la creazione di strutture dati dinamiche come le liste concatenate.
+
+6. Qual è la differenza tra allocazione statica e dinamica della memoria in C?
+
+L'allocazione statica assegna la memoria al momento della compilazione, mentre l'allocazione dinamica assegna la memoria durante l'esecuzione del programma. La memoria allocata dinamicamente deve essere rilasciata manualmente utilizzando la funzione free().
+
+7. Cosa sono le funzioni hash e come vengono utilizzate nell'implementazione dei dizionari?
+
+Le funzioni hash trasformano una chiave in un indice numerico, che viene utilizzato per accedere all'elemento corrispondente nel dizionario. Un buon algoritmo di hash distribuisce uniformemente le chiavi nell'array, riducendo il rischio di collisioni.
+
+8. Qual è il costo computazionale (caso peggiore) di alcuni algoritmi di ordinamento comuni?
+
+    Bubble sort: O(n^2), O(n) nel caso migliore
+    Merge sort: O(n log n)
+    Ordinamento per inserimento: O(n^2)
+    Deep copy: O(n)
+
+È importante scegliere l'algoritmo di ordinamento più efficiente in base alla dimensione e alle caratteristiche del dataset.

@@ -1,0 +1,85 @@
+*******************                 
+* ARRAY DINAMICI  *
+*******************
+Un array dinamico è defito da una struct del genere:
+{
+	elemento *a
+	INT capacità (o memoria allocata)
+	INT numero_elementi
+}
+
+Un elemento a sua volta è definito da questa struct
+{
+	char tipo (enumerazione tipo)	
+	void *dato 
+}
+Il tipo di dato non è definito subito, ma verrà convertito a seconda del campo tipo tramite casting.
+Quindi l' "array" è *a ossia un array di struct elemento.
+
+Per inizializzare un array dinamico basta fare ARRDIM array = {NULL,0,0}
+
+								CREAZIONE DEL TIPO DI DATO
+
+Per creare un elemento da inserire, usiamo funzioni apposite per ogni tipo di dato diverso:
+-INT E FLOAT (la funzione ritornerà un elemento e prende in input un INT oppure un float)
+{
+	inizializzo l'elemento con: elemento = {'tipo', NULL}
+	alloco la memoria per il puntatore con una malloc(sizeof(tipo))
+	converto elemento.dato con il casting e lo pongo = all'input
+	ritorno l'elemento
+}
+
+-STRINGHE
+{
+	inizializzo l'elemento.
+	pongo direttamente e.dato = input visto che la stringa essendo già un puntatore non ha bisono di malloc.
+	ritorno l'elemento
+
+}
+
+								INSERIMENTO ELEMENTO
+
+La funzione ritornerà un array dinamico e prenderà in input l'array dinamico da modificare, e l'elemento da inserire.
+{
+	prima di tutto controllare se la lista è piena (o vuota) se numero elementi è == capacità
+		se si, raddoppiamo la capacità con 2*(capacità + 1) (+1 copre il caso di lista vuota)
+		effettuare una realloc sul campo a per capacità*sizeof(elemento)
+	inseriamo l'elemento con a[numero_elementi] ed infine incrementiamo numero_elementi.
+	ritorniamo l'array dinamico modificato
+}
+
+								PRINT ARRAY DINAMICO
+La funzione non ritornerà nulla e prenderà in pasto l'array dinamico da mostrare
+{
+	iteriamo l'array dinamico(elemento *a) con un ciclo for da 0 a numero_elementi
+	ad ogni iterazione, con uno switch controlliamo il tipo di dato e stampiamo ricordando il casting!
+
+}
+
+							     ELIMINAZIONE IN CODA (POP)
+
+La funzione ritornerà l'array dinamico modificato e prende in input l'array da modificare
+{
+	decremento il numero_elementi
+	se c'è un grande spazio non utilizzato (almeno 1/4)
+	lo dimezzo con capacità/2 e poi faccio una realloc di a con capacità*sizeof(elemento)
+	se l'elemento non è una stringa
+		free(a[numero_elementi].dato)
+
+	ritorno l'array dinamico modificato
+}
+
+							 INSERIMENTO IN POSIZIONE ARBITRARIA
+
+La funzione ritornerà l'array dinamico modificato e prende in input l'array dinamico da modificare, l'elemento e la posizione
+{
+	se viene passata una posizione negativa
+		posizione = 0
+	eseguiamo l'inserimento in coda dell'elemento invocando la funzione precedente
+	iteriamo con un ciclo for da numero_elementi-1 a pos decrementando
+	scambio gli elementi con
+	a[i] = a[i-1]
+	a[i-1] = e
+
+	ritorna l'array modificato
+}

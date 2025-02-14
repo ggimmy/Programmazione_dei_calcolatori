@@ -1,0 +1,77 @@
+-In python l'operatore '/' ritorna sempre un float
+
+-La funzione input() ritorna sempre str
+
+-Se si usa una variabile non definita si ha un NameError
+
+-Nel confronto fra stringhe, la stringa prefisso precede quella che la contiene.
+
+-La concatenazione con un int da TypeError
+
+-Con l'operatore * posso ripetre n volte una stringa a patto che n sia intero, TypeError altrimenti
+
+-In caso una funzione non venga chiamata con gli argomenti giusti si ha TypeError
+
+-Lo slicing crea una nuova stringa
+
+-Le stringhe sono immutabili
+
+-Le tuple sono:
+    
+    -immutabili
+    -iterabili
+    Operazioni:
+    -len
+    -slicing
+    -indicizzazione
+
+-NB n append() consecutive costano complessivamente O(n)
+
+-Il metodo .join() concatena le liste con un separatore (lasciare vuoto per concatenare e basta)
+
+-Se a=[lista] e b = a. b è un aliasing di a non una copia
+
+-I frame python sono una struttura dati a stack.
+
+-La funzione max per confrontare usa gli operatori <,> e quindi se si confrontano tipi diversi si ha TypeError
+
+-La funzione sorted() crea un nuovo oggetto. Per modificare, odinandola, una lista utilizzare il metodo .sort()
+
+-Costo operazioni dizionari:
+    
+    -accesso elemento: O(1)
+    -inserimento: O(1)
+    -eliminazione: O(1)
+    
+    Metodi che processano tutto il dizionario:
+    -len: O(n)
+    -list(d.keys()): O(n)
+    -list(d.values()): O(n) 
+
+-La funzione zip() si ferma fino alla fine dell'iterabile più corto
+
+-I puntatori sono un tipo di dato che contiene un indirizzo di memoria, l'operatore & restituisce l'indirizzo di memoria della variabile
+
+-Allocazioni memoria:
+
+    -array statici: Compile tramite
+    -array dinamici: Runtime
+
+-In caso di accesso a memoria non allocata, si rischia un segmentation fault
+
+-La malloc ha costo costante O(1), mentre la realloc se non può estendersi ha costo O(n) nel caso peggiore
+
+-Costo operazioni array dinamici:
+
+    -ricerca per posizione: O(1)
+    -pop e append: O(n)
+    -inserimento e cancellazione: O(n) nel caso peggiore
+    -ricerca: O(n)
+
+-Costo operazioni linked lists:
+
+    -operazioni in testa ed in coda: O(1)
+    -ricerca, rimozione, accesso ad una posizione arbitraria: O(n)
+
+
+-Se una lista è già ordinata, vi è possibile utilizzare la ricerca binaria dal costo O(log_2 n) 
